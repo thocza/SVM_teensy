@@ -72,6 +72,7 @@ class SVMPWM{
     void begin();
     void setfrequency(float);
     void abcWrite(float, float, float);
+    void abWrite(float, float);
     void stop();
     void resume();
 

@@ -1,3 +1,5 @@
+#include <SVMPWM_teensy.h>
+
 /*********************************************************************
 * SVMPWM (Space-vector puls width modulation) for Teensy 4.0 and 4.1
 * This file give a short example how to use the SVMPWM_teensy library 
@@ -16,12 +18,10 @@
 * 
 *********************************************************************/
 
-#include "SVMPWM_teensy.h"
-
 // defines outputpins
 const uint A_PIN = 22;
 const uint B_PIN = 23;
-const unit C_PIN = 3;
+const uint C_PIN = 3;
 
 //set switchingfrequency to 5kHz
 float swfrequency = 5000;
