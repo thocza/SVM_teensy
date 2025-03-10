@@ -452,8 +452,8 @@ void SVMPWM::abcWrite(float dutya, float dutyb, float dutyc){
 void SVMPWM::abWrite(float dutyalpha, float dutybbeta){
   //set dutycyle in alpha beta
   //inputs between -0.5 and 0.5
-  b = -0.5*dutyalpha + SQRT3*0.5*dutybbeta;
-  c = -0.5*dutyalpha - SQRT3*0.5*dutybbeta;
+  float b = -0.5*dutyalpha + SQRT3*0.5*dutybbeta;
+  float c = -0.5*dutyalpha - SQRT3*0.5*dutybbeta;
   abcWrite(dutyalpha, b, c);
 }
 
