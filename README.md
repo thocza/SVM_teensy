@@ -11,7 +11,7 @@ On how to install libraries from GitHub to Arduino IDE see [here](https://forum.
 ## Syntax
 Include library to your project file:
 ```c++
-#include "SVMPWM_teensy.h"
+#include <SVMPWM_teensy.h>
 ```
 ### Constructor
 The SVM class has to constructors
