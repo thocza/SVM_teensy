@@ -9,17 +9,17 @@ author: Thomas Czaja
 
 ## Syntax
 Include library to your project file:
-```json
+```c++
 #include "SVMPWM_teensy.h"
 ```
 ### Constructor
 The SVM class has to constructors
 Constructor 1 creats the object with the selcted pins and the switching frequency but SVM is in disabled and has to be enabled before it starts to creat the SVM signals:
-```json
+```c++
 SVMPWM SVMobj(A_PIN, B_PIN, C_PIN, swfrequency);
 ```
 Constructor 2 creats the object and starts the SVM signal with the set duty-cycles:
-```json
+```c++
 SVMPWM SVMobj(A_PIN, B_PIN, C_PIN, swfrequency, dutyA, dutyB, dutyC);
 ```
 As the pins are connected to eahc sub-timer and only sub-timer of one FLEX timer are synchronized the pins that can be used for the SVM are connected to the following FLEX timer.
@@ -32,21 +32,21 @@ As the pins are connected to eahc sub-timer and only sub-timer of one FLEX timer
 
 ### En- and Disable SVM
 The SVM can be enabled with the following functions. There is no difference between both functions
-```json
+```c++
 SVMobj.begin();
 SVMobj.resume();
 ```
 The SVM can be disabled as followed. Currently the signal status of each pin is not defined when disabling. It can either be high or low.
-```json
+```c++
 SVMobj.stop();
 ```
 ###Set duty-cycles
 The duty cycles can either be set in a three phase space
-```json
+```c++
 SVMobj.abcWrite(dutyA, dutyB, dutyC);
 ```
 or in alpha beta space
-```json
+```c++
 SVMobj.abWrite(phaseAlpha, phaseBeta);
 ```
 Duty-cycles have are floats from -1. to 1.
