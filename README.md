@@ -40,7 +40,7 @@ The SVM can be disabled as followed. Currently the signal status of each pin is 
 ```c++
 SVMobj.stop();
 ```
-###Set duty-cycles
+### Set duty-cycles
 The duty cycles can either be set in a three phase space
 ```c++
 SVMobj.abcWrite(dutyA, dutyB, dutyC);
