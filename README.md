@@ -7,6 +7,7 @@ author: Thomas Czaja
 ## Introduction
 [SVM](https://en.wikipedia.org/wiki/Space_vector_modulation) is the standard puls with modulation method in moderen power electronic drive systems. This library provides an easy to use SVM class to utilize the FLEX PWM timers of the i.MX RT1060 processor used on the teensy 4.0 and 4.1 boards to creat a space vector modulated output signal. The teensy 4s have 4 independent FLEX PWM timers. Each timer has 4 synchronized timers, which can be configured to creat an SVM signal. Each sub-timer is hard wired to two pins that can be used independently. So dynamic pin allocation is not possible. For an example see SVM_example.ino.
 On how to install libraries from GitHub to Arduino IDE see [here](https://forum.arduino.cc/t/tutorial-with-screen-shots-how-to-download-a-library-from-github-and-installing-a-zip-library/994122).
+For more information on the teensy project see [here](https://www.pjrc.com/teensy/index.html).
 
 ## Syntax
 Include library to your project file:
